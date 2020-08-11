@@ -1,0 +1,8 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h1>Blog Home!</h1>
+<img src="{{ object.author.profile.image.url }}" />
+<h2>{{ object.title }}</h2>
+<p>{{ object.author }} on {{ object.date_posted|date:"F d, Y" }}</p>
+<p>{{ object.content }}</p>
+{% endblock content %}

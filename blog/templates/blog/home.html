@@ -2,7 +2,10 @@
 {% block content %}
 <h1>Blog Home!</h1>
     {% for post in posts %}
-        <h2>{{ post.title }}</h2>
+        <img src="{{ post.author.profile.image.url }}" />
+        <a href="{% url 'post-detail' post.id %}">
+            <h2>{{ post.title }}</h2>
+        </a>
         <p>{{ post.author }} on {{ post.date_posted|date:"F d, Y" }}</p>
         <p>{{ post.content }}</p>
     {% endfor %}
