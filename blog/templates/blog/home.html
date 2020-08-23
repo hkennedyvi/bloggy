@@ -1,6 +1,10 @@
 {% extends "blog/base.html" %}
 {% block content %}
-<h1>Blog Home!</h1>
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to Bloggy!</h1>
+    <p class="lead">We're glad you're here.</p>
+    <p>Now, get to blogging.</p>
+  </div>
     {% for post in posts %}
         <img src="{{ post.author.profile.image.url }}" />
         <a href="{% url 'post-detail' post.id %}">
