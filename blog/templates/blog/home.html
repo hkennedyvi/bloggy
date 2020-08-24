@@ -8,14 +8,18 @@
 {% for post in posts %}
 <div class="card mt-5">
     <h5 class="card-header">Featured</h5>
-    <div class="card-body">
-        <img src="{{ post.author.profile.image.url }}" />
-        <a href="{% url 'post-detail' post.id %}">
-            <h2 class="card-title">{{ post.title }}</h2>
-        </a>
-        <a href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
-        <p class="card-text">{{ post.content }}</p>
-        <p class="text-muted">Submitted: {{ post.date_posted|date:"F d, Y" }}</p>
+    <div class="card-horizontal">
+        <div class="image-wrapper">
+            <img src="{{ post.author.profile.image.url }}" />
+        </div>
+        <div class="card-body">
+            <a href="{% url 'post-detail' post.id %}">
+                <h2 class="card-title">{{ post.title }}</h2>
+            </a>
+            <a href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+            <p class="card-text">{{ post.content }}</p>
+            <p class="text-muted">Submitted: {{ post.date_posted|date:"F d, Y" }}</p>
+        </div>
     </div>
 </div>
 {% endfor %}

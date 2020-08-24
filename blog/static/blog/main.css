@@ -1,3 +1,17 @@
 .navbar {
     font-family: 'Balsamiq Sans', cursive;
 }
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .card-title {
+      color: indianred;
+      font-size: 50px;
+  }
