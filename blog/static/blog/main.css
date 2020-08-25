@@ -1,24 +1,30 @@
-.navbar {
+.font-primary {
   font-family: 'Lobster Two', cursive;
-
 }
 
-.jumbotron {
+.font-secondary {
   font-family: 'Heebo', sans-serif;
 }
 
+.bg-color-primary {
+  background-color: #495867;
+}
+
+.bg-color-secondary {
+  background-color: #577399;
+}
+
+.bg-color-third {
+  background-color: #BDD5EA;
+}
+
 .card-horizontal {
-    display: flex;
-    flex: 1 1 auto;
-  }
+  display: flex;
+  flex: 1 1 auto;
+}
 
   a:hover {
     text-decoration: none;
-  }
-
-  .card-title {
-      color: indianred;
-      font-size: 50px;
   }
 
   .author-img {
@@ -26,7 +32,7 @@
     width: 150px;
     margin: 50px 30px
   }
-
+  
   .profile-img {
     height: 250px;
     width: 250px;
