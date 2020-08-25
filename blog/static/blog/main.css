@@ -6,6 +6,18 @@
   font-family: 'Heebo', sans-serif;
 }
 
+.text-color-primary {
+  color: #FF3366;
+}
+
+.text-color-secondary {
+  color: black;
+}
+
+.text-color-third {
+  color: #F7F7FF;
+}
+
 .bg-color-primary {
   background-color: #495867;
 }
@@ -32,7 +44,7 @@
     width: 150px;
     margin: 50px 30px
   }
-  
+
   .profile-img {
     height: 250px;
     width: 250px;

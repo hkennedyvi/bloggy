@@ -7,16 +7,16 @@
 </div>
 {% for post in posts %}
 <div class="card mt-5">
-    <h5 class="card-header">Featured</h5>
+    <h5 class="card-header bg-color-third">Featured</h5>
     <div class="card-horizontal bg-color-third">
         <div class="image-wrapper">
             <img class="rounded-circle author-img" src="{{ post.author.profile.image.url }}" />
         </div>
         <div class="card-body">
             <a href="{% url 'post-detail' post.id %}">
-                <h2 class="card-title">{{ post.title }}</h2>
+                <h1 class="card-title font-primary text-color-secondary">{{ post.title }}</h1>
             </a>
-            <a href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+            <a class="text-color-primary" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
             <p class="card-text">{{ post.content }}</p>
             <p class="text-muted">Submitted: {{ post.date_posted|date:"F d, Y" }}</p>
         </div>
