@@ -1,5 +1,10 @@
 .navbar {
-    font-family: 'Balsamiq Sans', cursive;
+  font-family: 'Lobster Two', cursive;
+
+}
+
+.jumbotron {
+  font-family: 'Heebo', sans-serif;
 }
 
 .card-horizontal {
