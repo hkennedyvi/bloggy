@@ -50,3 +50,9 @@
     width: 250px;
     margin: 10px;
   }
+
+  .about-hero {
+    background-image: url("../../../media/typewriter_blue_bg.jpg");
+    background-size: 1400px;
+    height: 600px;
+  }
