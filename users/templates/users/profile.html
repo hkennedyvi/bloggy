@@ -1,10 +1,9 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <h1>Hi, {{ user.username }}! This is your profile page.</h1>
-    <h2>{{ user.email }}</h2>
-    <img class="rounded-circle profile-img"src="{{ user.profile.image.url }}" />
-
+<div class="container mt-5 mb-5 bg-color-fourth">
+    <h3 class="mt-5">Hey, {{ user.username }}. Need to update your profile?</h3>
+    <img class="mb-5 rounded-circle profile-img"src="{{ user.profile.image.url }}" />
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <fieldset>
@@ -13,7 +12,8 @@
             {{ p_form|crispy }}
         </fieldset>
         <div>
-            <button class="btn btn-danger">Update</button>
+            <button class="btn btn-danger mb-5">Update</button>
         </div>
     </form>
+</div>
 {% endblock content %}
