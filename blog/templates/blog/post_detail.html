@@ -1,12 +1,13 @@
 {% extends "blog/base.html" %}
 {% block content %}
-<h1>Blog Home!</h1>
-<img src="{{ object.author.profile.image.url }}" />
+<div class="container">
+<img class="mt-5" src="{{ object.author.profile.image.url }}" />
 <h2>{{ object.title }}</h2>
 <p>{{ object.author }} on {{ object.date_posted|date:"F d, Y" }}</p>
 <p>{{ object.content }}</p>
 {% if object.author == user %}
 <a class="btn bg-color-third" href="{% url 'post-update' object.id %}"><i class="far fa-edit"></i></a>
 <a class="btn btn-danger" href="{% url 'post-delete' object.id %}"><i class="fas fa-trash-alt"></i></a>
+</div>
 {% endif %}
 {% endblock content %}

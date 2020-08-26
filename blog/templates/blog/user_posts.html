@@ -1,5 +1,6 @@
 {% extends "blog/base.html" %}
 {% block content %}
+<div class="container">
     <h1>{{ view.kwargs.username }} Posts!</h1>
     <h2>Authored: {{ page_obj.paginator.count }} entries.</h2>
 <h1>Blog Home!</h1>
@@ -33,4 +34,5 @@
         {% endif %}
 
     {% endif %}
+</div>
 {% endblock content %}

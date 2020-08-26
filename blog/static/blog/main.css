@@ -1,3 +1,7 @@
+h1 {
+  font-size: 60px;
+}
+
 .font-primary {
   font-family: 'Lobster Two', cursive;
 }
@@ -42,7 +46,7 @@
   .author-img {
     height: 150px;
     width: 150px;
-    margin: 50px 30px
+    margin: 50px 30px;
   }
 
   .profile-img {
@@ -55,4 +59,8 @@
     background-image: url("../../../media/typewriter_blue_bg.jpg");
     background-size: 1400px;
     height: 600px;
+  }
+
+  .about-content {
+    margin: 100px 0px;
   }
