@@ -1,6 +1,6 @@
 {% extends "blog/base.html" %}
 {% block content %}
-<div class="container">
+<div class="container bg-color-fourth">
 <img class="mt-5" src="{{ object.author.profile.image.url }}" />
 <h2>{{ object.title }}</h2>
 <p>{{ object.author }} on {{ object.date_posted|date:"F d, Y" }}</p>
