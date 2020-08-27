@@ -1,17 +1,26 @@
 {% extends "blog/base.html" %}
 {% block content %}
 <div class="container">
-    <h1>{{ view.kwargs.username }} Posts!</h1>
-    <h2>Authored: {{ page_obj.paginator.count }} entries.</h2>
-<h1>Blog Home!</h1>
+    <h1>Entries by {{ view.kwargs.username }}</h1>
+    <h2>{{ page_obj.paginator.count }} entries total</h2>
     {% for post in posts %}
-        <img src="{{ post.author.profile.image.url }}" />
-        <a href="{% url 'post-detail' post.id %}">
-            <h2>{{ post.title }}</h2>
-        </a>
-        <a href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a> 
-        <p>on {{ post.date_posted|date:"F d, Y" }}</p>
-        <p>{{ post.content }}</p>
+        <div class="card mb-3">
+            <h5 class="card-header bg-color-fourth">Featured</h5>
+            <div class="card-horizontal bg-color-fourth">
+                <div class="image-wrapper">
+                    <img class="rounded-circle author-img" src="{{ post.author.profile.image.url }}" />
+                </div>
+                <div class="card-body">
+                    <a href="{% url 'post-detail' post.id %}">
+                        <h1 class="card-title font-primary text-color-secondary">{{ post.title }}</h1>
+                    </a>
+                    <a class="text-color-primary"
+                        href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+                    <p class="card-text">{{ post.content }}</p>
+                    <p class="text-muted">Submitted: {{ post.date_posted|date:"F d, Y" }}</p>
+                </div>
+            </div>
+        </div>
     {% endfor %}
     {% if is_paginated %}
 
