@@ -1,19 +1,23 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="container bg-color-fourth">
-<h1>Post</h1>
-<div>
-    <form method="POST">
-        {% csrf_token %}
-        <fieldset>
-            <legend>My New Post</legend>
-            {{ form|crispy }}
-        </fieldset>
-        <div>
-            <button class="btn bg-color-third"><i class="fas fa-feather"></i></button>
-        </div>
-    </form>
-</div>
+<div class="container bloggy-post bg-color-fourth">
+    <h1 class="d-flex justify-content-center">
+        My New Post &nbsp;
+        <i class="fas fa-feather text-color-primary"></i>
+    </h1>
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset>
+                {{ form|crispy }}
+            </fieldset>
+            <div>
+                <button class="btn bg-color-third">
+                    <i class="fas fa-feather"></i>
+                </button>
+            </div>
+        </form>
+    </div>
 </div>
 {% endblock content %}

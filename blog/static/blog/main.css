@@ -89,3 +89,9 @@ h1 {
     font-size: 10px;
     text-align: center;
   }
+
+  .bloggy-post {
+    margin: 70px auto;
+    padding: 50px;
+    border-radius: 5em;
+  }
