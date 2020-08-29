@@ -1,7 +1,7 @@
 {% extends "blog/base.html" %}
 {% block content %}
 <div class="container">
-    <div class="pt-4 pb-2 mt-5 mb-5 text-center font-primary bg-color-third">
+    <div class="rounded pt-4 pb-2 mt-5 mb-5 text-center font-primary bg-color-third">
         <h1>{{ view.kwargs.username }}</h1>
         <h5 class="text-muted">{{ page_obj.paginator.count }} entries total</h5>
     </div>
