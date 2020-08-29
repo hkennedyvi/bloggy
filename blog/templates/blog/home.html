@@ -1,13 +1,18 @@
 {% extends "blog/base.html" %}
 {% block content %}
-<div class="jumbotron mt-5 font-primary bg-color-third">
-    <div class="row text-center">
-        <div class="col">
-            <h1 class="">Welcome!</h1>
+<div class="jumbotron mt-5 bg-color-third">
+    <div class="row">
+        <div class="col-3">
+            <div class="d-flex flex-row justify-content-center">
+                <img src="../../static/blog/edgar_allan_poe.png" alt="Edgar Allan Poe">
+            </div>
         </div>
-        <div class="col">
-            <h3>We're glad you're here.</h3>
-            <h3>Now, get to blogging.</h3>
+        <div class="col-9">
+            <h2>
+                "I would define, in brief, the poetry of words as the rhythmical creation of
+                <del>Beauty</del> a Blog."
+            </h2>
+            <h4>-Edgar Allan Poe</h4>
         </div>
     </div>
 </div>
@@ -53,9 +58,9 @@
         {% else %}
         <div class="col-1 d-flex justify-content-center">
             <div class="position-fixed d-flex flex-column user-i">
-                    <button class="btn bg-color-fourth user-i-btn text-color-primary" disabled>
-                        <i class="fas fa-feather"></i>
-                    </button>
+                <button class="btn bg-color-fourth user-i-btn text-color-primary" disabled>
+                    <i class="fas fa-feather"></i>
+                </button>
                 <a href="{% url 'login' %}">
                     <div class="btn bg-color-fourth user-i-btn text-color-primary">
                         <i class="fas fa-sign-in-alt"></i>
