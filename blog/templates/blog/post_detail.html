@@ -1,17 +1,35 @@
 {% extends "blog/base.html" %}
 {% block content %}
-<div class="container bloggy-post bg-color-fourth">
-    <img class="mt-5" src="{{ object.author.profile.image.url }}" />
-    <h2>{{ object.title }}</h2>
-    <p>{{ object.author }} on {{ object.date_posted|date:"F d, Y" }}</p>
-    <p>{{ object.content }}</p>
-    {% if object.author == user %}
-    <a class="btn bg-color-third" href="{% url 'post-update' object.id %}">
-        <i class="far fa-edit"></i>
-    </a>
-    <a class="btn btn-danger" href="{% url 'post-delete' object.id %}">
-        <i class="fas fa-trash-alt"></i>
-    </a>
+<div class="container">
+    <div class="card">
+        <h5 class="card-header bg-color-fourth">Post:</h5>
+        <div class="card-horizontal bg-color-fourth">
+            <div class="image-wrapper">
+                <img class="rounded-circle author-img" src="{{ object.author.profile.image.url }}" />
+            </div>
+            <div class="card-body">
+                <a href="{% url 'post-detail' post.id %}">
+                    <h1 class="card-title font-primary text-color-secondary">{{ object.title }}</h1>
+                </a>
+                <a class="text-color-primary" href="{% url 'user-posts' post.author.username %}">{{ object.author }}</a>
+                <p class="card-text">{{ object.content }}</p>
+                <p class="text-muted">Submitted: {{ object.date_posted|date:"F d, Y" }}</p>
+                <a class="btn bg-color-secondary text-color-third" href="{% url 'blog-home' %}">
+                    <i class="fas fa-home"></i>
+                    Home    
+                </a>
+                {% if object.author == user %}
+                <a class="btn bg-color-third" href="{% url 'post-update' object.id %}">
+                    <i class="far fa-edit"></i>
+                    Edit
+                </a>
+                <a class="btn btn-danger" href="{% url 'post-delete' object.id %}">
+                    <i class="fas fa-trash-alt"></i>
+                    Delete
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 </div>
-{% endif %}
 {% endblock content %}
