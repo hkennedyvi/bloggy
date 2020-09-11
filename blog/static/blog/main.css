@@ -10,6 +10,10 @@ h1 {
   font-family: 'Heebo', sans-serif;
 }
 
+.font-secondary {
+  font-family: 'Oswald', sans-serif;
+}
+
 .text-color-primary {
   color: #FF3366;
 }
@@ -36,6 +40,10 @@ h1 {
 
 .bg-color-fourth {
   background-color: #F7F7FF;
+}
+
+.nav-text {
+  font-size: 20px;
 }
 
 .card-horizontal {
