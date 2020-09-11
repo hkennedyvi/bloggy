@@ -14,5 +14,5 @@ Full Stack Web App complete with:
 * AWS 
 * Admin Controls
 
-Styling = [Bootsrap](https://getbootstrap.com/)
-Database = [PostgreSQL](https://www.postgresql.org/)
+* Styling = [Bootsrap](https://getbootstrap.com/)
+* Database = [PostgreSQL](https://www.postgresql.org/)
