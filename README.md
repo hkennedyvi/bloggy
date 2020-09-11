@@ -1,5 +1,5 @@
-# blog
+# BLOGGY
 
-A Python blog application 
+A blog application built with Django.
 
-min 35
+![](https://media.giphy.com/media/kcaAI9zoIVY4OlNXz0/source.mp4)
